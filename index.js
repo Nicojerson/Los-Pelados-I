@@ -27,7 +27,7 @@ let datos = JSON.parse(fs.readFileSync("data/pedidos.json", "utf-8"))
 datos.push(cliente)
 datos.push(producto)
 datos.push(saboresElegidos)
-let nuevojson = JSON.stringify(datos)
+let nuevojson = JSON.stringify(datos, null, 2)
 
 fs.writeFileSync("data/pedidos.json", nuevojson)
 
